@@ -2,6 +2,7 @@ package edu.temple.inclassuiacvitivity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.*
 class MainActivity : AppCompatActivity() {
@@ -14,6 +15,10 @@ class MainActivity : AppCompatActivity() {
 
         /* TODO Step 2: Populate this array with multiples of 5 from 5 - 100*/
         //val numberArray = Array Of Numbers
+
+        // val numberArray = Array(20, {(it + 1) * 5})
+        val numberArray = Array(20) { i -> (i + 1) * 5 }
+        Log.d("TAG", numberArray.joinToString(", "))
 
         /* TODO Step 3: Create adapter to display items from array in Spinner */
         //spinner.adapter = ArrayAdapter...
